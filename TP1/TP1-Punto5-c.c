@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <unistd.h>
 
 int main() {
-  printf("%c\n",
-         getcwd("/home/llanillo/sistemas_materia/archivo-texto.txt", 200));
+  printf("%s\n", getcwd("/home/llanillo/sistemas_materia/archivo-texto.txt", 200));
 
   getchar();
 
@@ -12,7 +12,7 @@ int main() {
 
   getchar();
 
-  printf("%d\n", time(NULL));
+  printf("%ld\n", time(NULL));
 
   getchar();
 
