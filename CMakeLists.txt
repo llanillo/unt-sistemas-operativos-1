@@ -3,4 +3,6 @@ project(Sistemas_Operativos)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Sistemas_Operativos main.cpp)
+# Search all the .cpp files and add them to a variable
+file(GLOB_RECURSE SOURCE_FILES TP1)
+add_executable(${PROJECT_NAME} TP1/TP1-Punto5-c.c ${SOURCE_FILES})
