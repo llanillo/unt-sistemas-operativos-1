@@ -4,11 +4,11 @@
 #include <unistd.h>
 
 int main() {
-  printf("%s\n", getcwd("/home/llanillo/sistemas_materia/archivo-texto.txt", 200));
+  printf("%s\n", getcwd("/archivo.txt", 200));
 
   getchar();
 
-  printf("%d\n", chdir("/home/llanillo/sistemas_materia/archivo-texto.txt"));
+  printf("%d\n", chdir("archivo.txt"));
 
   getchar();
 

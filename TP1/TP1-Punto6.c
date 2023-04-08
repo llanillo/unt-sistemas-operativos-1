@@ -1,8 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() {
     FILE *archivo;
-    char linea1[100], linea2[100];
+    char linea1[100];
+    char linea2[100];
     
     // Abrir el archivo en modo de lectura
     archivo = fopen("archivo.txt", "r");
@@ -15,10 +17,19 @@ int main() {
     
     // Cerrar el archivo
     fclose(archivo);
-    
+
+    printf("Abriendo archivo\n");
+
+    getchar();
+
     // Mostrar las líneas leídas en la consola
     printf("Línea 1: %s\n", linea1);
+
+    getchar();
+
     printf("Línea 2: %s\n", linea2);
-    
-    return 0;
+
+    getchar();
+
+    exit(1);
 }
