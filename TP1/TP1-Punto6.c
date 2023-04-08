@@ -2,20 +2,20 @@
 #include <stdlib.h>
 
 int main() {
-  FILE *archivo;
-  char caracter;
+    FILE *archivo;
+    char caracter;
 
-  archivo = fopen("texto.txt", "r");
+    archivo = fopen("texto.txt", "r");
 
-  if (archivo == NULL) {
-    printf("Archivo no existente");
-    return EXIT_FAILURE;
-  } else {
-    printf("\nEl contenido del archivo es \n");
-    while ((caracter = fgetc(archivo)) != EOF) {
-      printf("%c", caracter);
+    if (archivo == NULL) {
+        printf("Archivo no existente");
+        return EXIT_FAILURE;
+    } else {
+        printf("\nEl contenido del archivo es \n");
+        while ((caracter = fgetc(archivo)) != EOF) {
+            printf("%c", caracter);
+        }
     }
-  }
 
-  return EXIT_SUCCESS;
+    return EXIT_SUCCESS;
 }
