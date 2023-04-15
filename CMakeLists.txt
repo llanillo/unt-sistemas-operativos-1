@@ -5,4 +5,4 @@ set(CMAKE_CXX_STANDARD 17)
 
 # Search all the .cpp files and add them to a variable
 file(GLOB_RECURSE SOURCE_FILES TP1)
-add_executable(${PROJECT_NAME} TP4/TP4-Punto5.c ${SOURCE_FILES})
+add_executable(${PROJECT_NAME} TP4/TP4-Punto6.c ${SOURCE_FILES})
