@@ -21,26 +21,21 @@ c. Con éste código ¿puede distinguir cuál es el proceso padre y cuál el hij
  Si es igual a cero es el proceso hijo, si es otro número (ID) es el proceo padre
 
  */
+
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(){
+#define CANTIDAD_ITERACIONES 5
 
-    int cantidad_iteraciones = 5;
+int main() {
+
     int resultado;
 
 
-    while(cantidad_iteraciones > 0){
-
+    while (CANTIDAD_ITERACIONES > 0) {
         resultado = fork();
-
-        if(resultado == 0){
-            printf("ID proceso hijo es %i\n", getpid());
-        }
-        else{
-            printf("ID proceso padre es %i\n", getpid());
-        }
+        printf("ID proceso es %i\n", getpid());
     }
 
     return 0;
