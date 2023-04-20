@@ -13,7 +13,6 @@ qué system call se invoca para crear los hilos. ¿Cuál es?
 #include <pthread.h>
 
 #define CANTIDAD_HILOS 2
-#define CANTIDAD_ITERACIONES 2
 
 void* TareaDelHilo(void* arg);
 
@@ -22,7 +21,7 @@ int main(){
     int resultado;
     pthread_t hilos [CANTIDAD_HILOS];
 
-    for(int i = 0; i < CANTIDAD_ITERACIONES; i++){
+    for(int i = 0; i < CANTIDAD_HILOS; i++){
         resultado = pthread_create(hilos, NULL, TareaDelHilo, (void*)hilos[i]);
 
         if(resultado != 0){
@@ -31,6 +30,9 @@ int main(){
         }
     }
 
+    for(int i = 0; i < CANTIDAD_HILOS; i++){
+        pthread_join(hilos[i], NULL);
+    }
 
     return 0;
 }
